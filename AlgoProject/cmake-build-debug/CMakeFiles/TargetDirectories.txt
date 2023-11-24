@@ -1,0 +1,3 @@
+C:/Users/marli/CLionProjects/AlgoProject/cmake-build-debug/CMakeFiles/AlgoProject.dir
+C:/Users/marli/CLionProjects/AlgoProject/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/marli/CLionProjects/AlgoProject/cmake-build-debug/CMakeFiles/rebuild_cache.dir
