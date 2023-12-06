@@ -22,4 +22,8 @@ void displayList(t_d_list liste);
 
 void insertCellAtlist(t_d_cell* cel,t_d_list* liste);
 
+int ResearchVal(t_d_list* list,int val);
+
+int DichoResearch (t_d_list* list, int val);
+
 #endif //ALGOPROJECT_LIST_H
