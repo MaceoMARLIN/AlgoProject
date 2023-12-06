@@ -65,4 +65,45 @@ void insertCellAtlist(t_d_cell* cel,t_d_list* liste){
         }
 
     }
+
+}
+
+int ResearchVal(t_d_list* list,int val){
+        t_d_cell* tmp = list->head[0];
+        while (tmp != NULL){
+            if (tmp->value == val){
+                return 1;
+            }
+            tmp = tmp->next[0];
+        }
+        return 0;
+}
+
+int DichoResearch(t_d_list* list, int val){
+    int lvl=list->max_lvl;
+    t_d_cell* tmp = list->head[lvl];
+
+    while (tmp != NULL){
+        if (tmp->value == val){
+            return 1;
+        }
+
+        if (tmp->value > val){
+             lvl = lvl - 1;
+            tmp = list->head[lvl];
+        }
+
+        if (tmp->value < val){
+            lvl=0;
+
+            while (tmp != NULL){
+                tmp = *tmp->next;
+                if (tmp->value == val){
+                    return 1;
+                }
+
+            }
+        }
+    }
+    return 0;
 }
