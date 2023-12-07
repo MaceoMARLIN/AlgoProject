@@ -80,30 +80,30 @@ int ResearchVal(t_d_list* list,int val){
 }
 
 int DichoResearch(t_d_list* list, int val){
-    int lvl=list->max_lvl;
+    int lvl = list->max_lvl-1;
     t_d_cell* tmp = list->head[lvl];
+
+    while (lvl > 0) {
+        if (tmp->value == val) {
+            return 1;
+        } else if (tmp->value > val) {
+            lvl = lvl - 1;
+            tmp = list->head[lvl];
+        } else if (tmp->value < val) {
+            lvl -= 1;
+        }
+    }
 
     while (tmp != NULL){
         if (tmp->value == val){
             return 1;
         }
-
-        if (tmp->value > val){
-             lvl = lvl - 1;
-            tmp = list->head[lvl];
+        else if (tmp->value > val){
+            return 0;
         }
-
-        if (tmp->value < val){
-            lvl=0;
-
-            while (tmp != NULL){
-                tmp = *tmp->next;
-                if (tmp->value == val){
-                    return 1;
-                }
-
-            }
-        }
+        tmp = tmp->next[lvl];
     }
+    return 0;
+}
     return 0;
 }
