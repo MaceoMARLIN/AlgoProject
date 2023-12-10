@@ -91,6 +91,12 @@
 		<Unit filename="C:/Users/Jonat/CLionProjects/AlgoProject/AlgoProject/main.c">
 			<Option target="AlgoProject"/>
 		</Unit>
+		<Unit filename="C:/Users/Jonat/CLionProjects/AlgoProject/AlgoProject/partie 3.c">
+			<Option target="AlgoProject"/>
+		</Unit>
+		<Unit filename="C:/Users/Jonat/CLionProjects/AlgoProject/AlgoProject/partie 3.h">
+			<Option target="AlgoProject"/>
+		</Unit>
 		<Unit filename="C:/Users/Jonat/CLionProjects/AlgoProject/AlgoProject/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

@@ -8,6 +8,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/AlgoProject.dir/list.c.obj.d"
   "CMakeFiles/AlgoProject.dir/main.c.obj"
   "CMakeFiles/AlgoProject.dir/main.c.obj.d"
+  "CMakeFiles/AlgoProject.dir/partie_3.c.obj"
+  "CMakeFiles/AlgoProject.dir/partie_3.c.obj.d"
   "libAlgoProject.dll.a"
 )
 
