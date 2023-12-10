@@ -1,21 +1,20 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "list.h"
 #include "cellule.h"
+#include "timer.h"
 
 int main() {
-    t_d_list liste = createEmptyList(5);
-    t_d_cell* cel = createCell(59,2);
-    t_d_cell* cel1 = createCell(53,3);
-    t_d_cell* cel2 = createCell(1,4);
-    t_d_cell* cel3 = createCell(91,5);
-
-    insertCellAtlist(cel3, &liste);
-    insertCellAtlist(cel2, &liste);
-    insertCellAtlist(cel1, &liste);
-    insertCellAtlist(cel, &liste);
-    displayList(liste);
-
-    printf("%d", ResearchVal( &liste, 46 ));
-    printf("%d", DichoResearch( &liste, 46 ));
+    int random;
+    t_d_list liste;
+    startTimer();
+    for (int i = 1; i <= 1000; i++) {
+        liste = ListByLevel_array(i);
+        random = rand();
+        printf("%d - %d\n", random, i);
+        ResearchVal(&liste, random);
+    }
+    stopTimer();
+    displayTime();
     return 0;
 }

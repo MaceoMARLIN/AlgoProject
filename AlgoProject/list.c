@@ -5,6 +5,7 @@
 #include "cellule.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "math.h"
 
 t_d_list createEmptyList(int niv_max){
     t_d_list liste;
@@ -69,14 +70,14 @@ void insertCellAtlist(t_d_cell* cel,t_d_list* liste){
 }
 
 int ResearchVal(t_d_list* list,int val){
-        t_d_cell* tmp = list->head[0];
-        while (tmp != NULL){
-            if (tmp->value == val){
-                return 1;
-            }
-            tmp = tmp->next[0];
+    t_d_cell* tmp = list->head[0];
+    while (tmp != NULL){
+        if (tmp->value == val){
+            return 1;
         }
-        return 0;
+        tmp = tmp->next[0];
+    }
+    return 0;
 }
 
 int DichoResearch(t_d_list* list, int val){
@@ -104,4 +105,34 @@ int DichoResearch(t_d_list* list, int val){
         tmp = tmp->next[lvl];
     }
     return 0;
+}
+
+int* level_array(int n){
+    int lenght = pow(2, n)-1;
+    int ii;
+    int* levelist = (int*)malloc((lenght)* sizeof(int));
+
+    for (int i= 0; i < lenght; i++){
+        levelist[i] = 0;
+    }
+    for (int i= 1; pow(2, i) < lenght; i++){
+        ii = pow(2, i);
+        while (ii < lenght){
+            levelist[ii-1] += 1;
+            ii += pow(2, i);
+        }
+    }
+    return levelist;
+}
+
+t_d_list ListByLevel_array(int n){
+    int* levelist = level_array(n);
+    t_d_list liste = createEmptyList(n);
+    t_d_cell* cell;
+
+    for (int i = pow(2, n)-2; i >= 0; i--){
+        cell = createCell(levelist[i]+1, levelist[i]+1);
+        insertCellHead(cell, &liste);
+    }
+    return liste;
 }
