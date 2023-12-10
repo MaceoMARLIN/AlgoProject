@@ -42,4 +42,3 @@ char *getTimeAsString()
 
     // return the buffer
     return buffer;
-}
