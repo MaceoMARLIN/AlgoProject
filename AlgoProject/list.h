@@ -26,4 +26,8 @@ int ResearchVal(t_d_list* list,int val);
 
 int DichoResearch (t_d_list* list, int val);
 
+int *level_array (int n);
+
+t_d_list ListByLevel_array(int n);
+
 #endif //ALGOPROJECT_LIST_H
