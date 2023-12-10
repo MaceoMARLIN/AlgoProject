@@ -38,7 +38,12 @@ typedef struct s_rdv{
 
 typedef struct s_agenda{
     t_contact contact;
-    struct p_rdv** rdv;
-};
+    t_d_list rdv;
+}t_agenda;
+
+char* scanString(void);
+void CreateContact(t_d_list * list);
+void CreateRdv();
+
 
 #endif //ALGOPROJECT_PARTIE_3_H

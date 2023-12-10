@@ -105,5 +105,3 @@ int DichoResearch(t_d_list* list, int val){
     }
     return 0;
 }
-    return 0;
-}
