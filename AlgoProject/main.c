@@ -18,6 +18,9 @@ int main() {
 
     printf("%d", ResearchVal( &liste, 46 ));
     printf("%d", DichoResearch( &liste, 46 ));
-    CreateRdv();
+    t_entry entry = createContact();
+    entry.rdv = CreateRdv();
+    DisplayRdv(entry);
+
     return 0;
 }

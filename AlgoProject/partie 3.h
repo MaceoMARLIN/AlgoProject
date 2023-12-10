@@ -35,15 +35,15 @@ typedef struct s_rdv{
 typedef struct s_entry{
     t_contact contact;
     t_rdv* rdv;
-}t_entry;
+}t_entry,p_entry;
 
 
 
 char* scanString(void);
 int SearchContact();
 void CreateContactList();
-void CreateContact(t_d_list * list);
-void CreateRdv();
+t_entry createContact();
+t_rdv * CreateRdv();
 void DisplayRdv();
 
 

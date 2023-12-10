@@ -40,7 +40,7 @@ t_entry createContact() {
     return entry;
 }
 
-void CreateRdv(){
+t_rdv * CreateRdv(){
 
     t_rdv rdv;
     rdv.objet = (char*)malloc(TAILLE_MAX* sizeof(char));
@@ -81,19 +81,31 @@ void CreateRdv(){
     }
 }
 
-void SearchContact(t_d_list list){
+int SearchContact(t_d_list list){
     char* s = (char*)malloc(3 * sizeof(char));
     int i;
     printf("Qui est le contact recherche ? (3 premieres lettres du nom)\n");
     scanf("%s", s);
     while (list.head[i] != NULL){
-        if ((char) list.head[i] == s[0]){
+
 
         }
     }
-}
 
 
-void DisplayRdv(t_contact contact){
-    printf("%s, %s", )
+
+void DisplayRdv(t_entry entry){
+    t_rdv* rdv = entry.rdv;
+    printf("Voici le/les rendez-vous de %s %s\n", entry.contact.prenom, entry.contact.nom);
+    while (rdv != NULL){
+        printf("Date : %d/%d/%d\n", rdv->date.jour, rdv->date.mois, rdv->date.annee);
+        printf("A %d:%d\n", rdv->heure.heure, rdv->heure.minute);
+        printf("Duree : %d heures et %d minutes\n\n", rdv->duree.heure, rdv->duree.minute);
+        rdv = rdv->next;
+
+    }C
+
+
+
+
 }
