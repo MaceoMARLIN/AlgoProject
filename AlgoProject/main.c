@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "list.h"
 #include "cellule.h"
+#include "partie 3.h"
 
 int main() {
     t_d_list liste = createEmptyList(5);
@@ -17,5 +18,6 @@ int main() {
 
     printf("%d", ResearchVal( &liste, 46 ));
     printf("%d", DichoResearch( &liste, 46 ));
+    CreateRdv();
     return 0;
 }
