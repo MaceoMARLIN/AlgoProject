@@ -2,6 +2,7 @@
 #include "list.h"
 #include "cellule.h"
 #include "partie 3.h"
+#include <stdlib.h>
 
 int main() {
     t_d_list liste = createEmptyList(5);
@@ -18,8 +19,10 @@ int main() {
 
     printf("%d", ResearchVal( &liste, 46 ));
     printf("%d", DichoResearch( &liste, 46 ));
-    t_entry entry = createContact();
-    entry.rdv = CreateRdv();
+    printf("\n");
+
+    t_entry* entry = createContact();
+    entry->rdv = CreateRdv();
     DisplayRdv(entry);
 
     return 0;

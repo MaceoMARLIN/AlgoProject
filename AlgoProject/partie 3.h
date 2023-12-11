@@ -42,7 +42,7 @@ typedef struct s_entry{
 char* scanString(void);
 int SearchContact();
 void CreateContactList();
-t_entry createContact();
+t_entry *createContact();
 t_rdv * CreateRdv();
 void DisplayRdv();
 
